@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>test03</title>
+</head>
+<body>
+<h1>파일 업로드</h1>
+<p>
+  '파일 선택(Browse)' 버튼을 클릭하여 파일을 선택한 후 '전송' SUBMIT을 누른다.
+</p>
+
+<h2>GET 요청으로 파일 업로드</h2>
+<form action="../ex02/s3" method="get">
+  이름: <input type="text" name="name"><br>
+  나이: <input type="number" name="age"><br>
+  사진: <input type="file" name="photo"><br>
+  <input type="submit" value="GET 전송">
+</form>
+<p>
+  GET METHOD로는 파일을 전송할 수 없다.
+  단지 파일 이름만 전송된다.
+</p>
+
+<h2>POST 요청으로 파일 업로드</h2>
+<form action="../ex02/s3" method="post">
+  이름: <input type="text" name="name"><br>
+  나이: <input type="number" name="age"><br>
+  사진: <input type="file" name="photo"><br>
+  <input type="submit" value="POST1 전송">
+</form>
+<p>
+  POST METHOD 이지만 form이 default인
+  application/x-www-form-urlencoded 으로 파일이 전송되지 않는다.
+</p>
+
+<h2>POST MultiPart/Form 요청으로 파일 업로드</h2>
+<form action="../ex02/s3" enctype="multipart/form-data" method="post">
+  이름: <input type="text" name="name"><br>
+  나이: <input type="number" name="age"><br>
+  사진: <input type="file" name="photo"><br>
+  <input type="submit" value="POST2 전송">
+</form>
+<p>
+  파일을 업로드 하려면, 반드시 multipart/form-data 형식으로 POST 요청해야 한다.
+  파일의 이름 뿐만 아니라 파일 데이터도 전송한다.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>test01</title>
+</head>
+<body>
+<h1>Servlet GET 요청</h1>
+<p>
+  웹 브라우저 창에 'http://localhost:8888/ex02/s1?name=홍길동&age=20'
+  이는 /servlet/ex02/Servlet01.java로 연결된다.
+</p>
+
+<h1>Link GET 요청</h1>
+<p>
+  링크를 클릭한다. <br>
+  <a href="http://localhost:8888/ex02/s1?name=윤봉길&age=30">GET링크</a>
+</p>
+
+<h1>INPUT GET 요청</h1>
+<p>
+  아래 입력폼에 값을 넣고 '전송' submit을 누른다.
+</p>
+<form action="http://localhost:8888/ex02/s1" method="get">
+  이름: <input type="text" name="name"><br>
+  나이: <input type="number" name="age"><br>
+  <input type="submit" value="전송(GET)">
+</form>
+</body>
+</html>

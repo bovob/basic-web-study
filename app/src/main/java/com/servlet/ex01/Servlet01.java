@@ -1,4 +1,4 @@
-package com.servlet;
+package com.servlet.ex01;
 
 import java.io.IOException;
 import javax.servlet.Servlet;
@@ -43,13 +43,15 @@ import javax.servlet.http.HttpServletResponse;
  * value는 String[]로 URL을 1개만 입력할땐 {} 를 생략할 수 있다.
  */
 
-//@WebServlet("/ex01/second")
-public class Servlet02 implements Servlet {
+//@WebServlet("/ex01/first")
+//@WebServlet(value="/ex01/first1")
+@WebServlet(urlPatterns = {"/ex01/first", "/ex01/test/first"})
+public class Servlet01 implements Servlet {
 
     ServletConfig config;
 
-    public Servlet02(){
-        System.out.println("2번 Servlet()");
+    public Servlet01(){
+        System.out.println("1번 Servlet()");
     }
 
     // 서블릿 객체 생성 후 해당 메서드가 호출된다.
@@ -59,7 +61,7 @@ public class Servlet02 implements Servlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         this.config = config;
-        System.out.println("2번 init()");
+        System.out.println("1번 init()");
     }
 
     // 클라이언트가 이 서블릿에 실행 요청을 보낼 때 마다 호출되는 메서드
@@ -70,14 +72,14 @@ public class Servlet02 implements Servlet {
         HttpServletRequest req2 = (HttpServletRequest) req;
         HttpServletResponse res2 = (HttpServletResponse) res;
 
-        System.out.println("2번 service()");
+        System.out.println("1번 service()");
     }
 
     // 웹 애플리케이션을 종료할 때(서버 종료 포함) 호출된다.
     // => 이 서블릿이 만든 자원을 해제하는 코드를 해당 메서드에 넣는다.
     @Override
     public void destroy() {
-        System.out.println("2번 destroy()");
+        System.out.println("1번 destroy()");
     }
 
     // 서블릿에서 작업을 수행하는 중 서블릿 관련 설정 정보를 꺼낼 때 호출된다.
@@ -92,6 +94,6 @@ public class Servlet02 implements Servlet {
     // 보통 서블릿을 소개하는 간단한 문자열을 리턴한다.
     @Override
     public String getServletInfo() {
-        return "2번 Servlet";
+        return "1번 Servlet";
     }
 }

@@ -1,4 +1,4 @@
-package com.servlet;
+package com.servlet.ex01;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -7,7 +7,6 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
 
 /**
  * java/servlet/web/ex02

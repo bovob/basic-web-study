@@ -1,13 +1,8 @@
-package com.servlet;
+package com.servlet.ex01;
 
 
-import java.net.http.HttpRequest;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.ServletRequest;
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
-import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
 
 /**

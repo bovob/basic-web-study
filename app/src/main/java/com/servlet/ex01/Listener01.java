@@ -1,4 +1,4 @@
-package com.servlet;
+package com.servlet.ex01;
 
 
 import javax.servlet.ServletContextEvent;

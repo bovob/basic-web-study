@@ -9,13 +9,13 @@
 
 <!-- 리스너 등록 -->
 <listener>
-    <listener-class>com.servlet.Listener02</listener-class>
+    <listener-class>com.servlet.ex01.Listener02</listener-class>
 </listener>
 
 <!-- 서블릿 등록 -->
 <servlet>
     <servlet-name>second</servlet-name>
-    <servlet-class>com.servlet.Servlet02</servlet-class>
+    <servlet-class>com.servlet.ex01.Servlet02</servlet-class>
 </servlet>
 <servlet-mapping>
     <servlet-name>second</servlet-name>
@@ -25,7 +25,7 @@
 <!-- 필터 등록 -->
 <filter>
     <filter-name>filter2</filter-name>
-    <filter-class>com.servlet.Filter02</filter-class>
+    <filter-class>com.servlet.ex01.Filter02</filter-class>
 </filter>
 
 <!-- 필터를 적용할 URL 설정 -->
