@@ -6,6 +6,33 @@
   version="4.0"
   metadata-complete="false">
 <!--metadata-complete = @애너테이션 사용여부-->
+<!-- 전역변수등록 -->
+<context-param>
+    <param-name>jdbc.driver</param-name>
+    <param-value>org.mariadb.jdbc.Driver</param-value>
+</context-param>
+<context-param>
+    <param-name>jdbc.url</param-name>
+    <param-value>jdbc:mariadb://localhost:3306/studydb</param-value>
+</context-param>
+<context-param>
+    <param-name>jdbc.username</param-name>
+    <param-value>study</param-value>
+</context-param>
+<context-param>
+    <param-name>jdbc.password</param-name>
+    <param-value>1111</param-value>
+</context-param>
+
+<context-param>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
+</context-param>
+
+<context-param>
+    <param-name>aaa</param-name>
+    <param-value>hohoho</param-value>
+</context-param>
 
 <!-- 리스너 등록 -->
 <listener>
@@ -33,5 +60,16 @@
     <filter-name>filter2</filter-name>
     <url-pattern>/ex01/test/*</url-pattern>
 </filter-mapping>
+
+    <!-- 서블릿 등록 -->
+    <servlet>
+        <servlet-name>/ex03/s2</servlet-name>
+        <servlet-class>com.servlet.ex03.Servlet02</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>/ex03/s2</servlet-name>
+        <url-pattern>/ex03/s2</url-pattern>
+    </servlet-mapping>
 
 </web-app>
